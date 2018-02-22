@@ -25,9 +25,9 @@ public class ChunkSizeParameters {
 
     private static final String PARAMETER = "#{jobParameters['";
     private static final String OR_DEFAULT = "']?:'1000'}";
-
-    @Value(PARAMETER + 500 + OR_DEFAULT)
+    private static final Integer DEFAULT_SIZE= 500;
     private Integer chunkSize;
+    chunkSize = DEFAULT_SIZE;
 
     public Integer getChunkSize() {
         return chunkSize;
